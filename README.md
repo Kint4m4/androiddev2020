@@ -10,7 +10,7 @@ Students are expected to:
 Student Info
 =======================
 
-* Name: *YourNameHere*
-* ID: *YourIdHere*
+* Name: Nguyễn Minh Dương
+* ID: USTHBI7-048
 * Group ID: *Your Group ID here*
 
