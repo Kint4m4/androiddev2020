@@ -12,36 +12,38 @@ public class WeatherActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
+        ForecastFragment firstFragment = new ForecastFragment();
+        getSupportFragmentManager().beginTransaction().add(R.id.container, firstFragment).commit();
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Log.i(TAG, "onStart: This is a log message.");
+        Log.i(TAG, "onStart: Starting.");
 
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.i(TAG, "onResume: This is a log message.");
+        Log.i(TAG, "onResume: Resuming.");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.i(TAG, "onPause: This is a log message.");
+        Log.i(TAG, "onPause: Paused.");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.i(TAG, "onStop: This is a log message.");
+        Log.i(TAG, "onStop: Stoped.");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.i(TAG, "onDestroy: This is a log message.");
+        Log.i(TAG, "onDestroy: Destroyed.");
     }
 }

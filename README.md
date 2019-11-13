@@ -12,5 +12,5 @@ Student Info
 
 * Name: Nguyễn Minh Dương
 * ID: USTHBI7-048
-* Group ID: *Your Group ID here*
+* Group ID: 11
 
