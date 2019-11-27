@@ -1,49 +1,44 @@
-package vn.edu.usth.weather;
+package vn.edu.usth.usthweather;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
-
 import android.util.Log;
+import android.os.Bundle;
 
 public class WeatherActivity extends AppCompatActivity {
     private static final String TAG = "WeatherActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
+        Log.i(TAG,"onCreate: Weather activity is creating.");
         ForecastFragment firstFragment = new ForecastFragment();
         getSupportFragmentManager().beginTransaction().add(R.id.container, firstFragment).commit();
     }
-
     @Override
-    protected void onStart() {
+    protected void onStart(){
         super.onStart();
-        Log.i(TAG, "onStart: Starting.");
-
+        Log.i(TAG,"onStart: Weather activity is starting.");
     }
-
     @Override
-    protected void onResume() {
+    protected void onResume(){
         super.onResume();
-        Log.i(TAG, "onResume: Resuming.");
+        Log.i(TAG, "onResume: Weather activity is resuming.");
     }
-
     @Override
-    protected void onPause() {
+    protected void onPause(){
         super.onPause();
-        Log.i(TAG, "onPause: Paused.");
-    }
+        Log.i(TAG, "onPause: Weather activity is pausing.");
 
+    }
     @Override
-    protected void onStop() {
+    protected void onStop(){
         super.onStop();
-        Log.i(TAG, "onStop: Stoped.");
+        Log.i(TAG, "onStop: Weather activity is stopping.");
     }
-
     @Override
-    protected void onDestroy() {
+    protected void onDestroy(){
         super.onDestroy();
-        Log.i(TAG, "onDestroy: Destroyed.");
+        Log.i(TAG, "onDestroy: Weather activity is being destroyed.");
     }
 }
