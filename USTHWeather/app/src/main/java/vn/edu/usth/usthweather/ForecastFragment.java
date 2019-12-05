@@ -24,13 +24,12 @@ public class ForecastFragment extends Fragment {
         // Inflate the layout for this fragment
 
         LinearLayout forecast = new LinearLayout(getActivity());
-        forecast.setLayoutParams(new LinearLayout.MarginLayoutParams(FrameLayout.MarginLayoutParams.WRAP_CONTENT, FrameLayout.MarginLayoutParams.WRAP_CONTENT));
+        forecast.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
         forecast.setOrientation(LinearLayout.HORIZONTAL);
-        forecast.setHorizontalGravity(30);
         forecast.setPadding(28,30,0,20);
 
             LinearLayout day = new LinearLayout(getActivity());
-            day.setLayoutParams(new LinearLayout.MarginLayoutParams(FrameLayout.MarginLayoutParams.WRAP_CONTENT, FrameLayout.MarginLayoutParams.WRAP_CONTENT));
+            day.setLayoutParams(new LinearLayout.MarginLayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
             day.setOrientation(LinearLayout.VERTICAL);
             day.setBackgroundColor(0xFF2D5D76);
 
@@ -79,7 +78,7 @@ public class ForecastFragment extends Fragment {
 
 
             LinearLayout weathericon = new LinearLayout(getActivity());
-            weathericon.setLayoutParams(new LinearLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT));
+            weathericon.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
             weathericon.setOrientation(LinearLayout.VERTICAL);
             weathericon.setBackgroundColor(0xFF2D5D76);
 
