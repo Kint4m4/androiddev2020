@@ -13,6 +13,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 
 public class ForecastFragment extends Fragment {
 
@@ -21,27 +23,129 @@ public class ForecastFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        LinearLayout parent = new LinearLayout(getActivity());
-        parent.setLayoutParams(new LinearLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT));
-        parent.setOrientation(LinearLayout.HORIZONTAL);
-        parent.setBackgroundColor(0xFFFF6600);
+        LinearLayout forecast = new LinearLayout(getActivity());
+        forecast.setLayoutParams(new LinearLayout.MarginLayoutParams(FrameLayout.MarginLayoutParams.WRAP_CONTENT, FrameLayout.MarginLayoutParams.WRAP_CONTENT));
+        forecast.setOrientation(LinearLayout.HORIZONTAL);
+        forecast.setHorizontalGravity(30);
+        forecast.setPadding(28,30,0,20);
 
-        ImageView weatherIcon= new ImageView(getActivity());
-        weatherIcon.setImageResource(R.drawable.thunder);
-        weatherIcon.setScaleType((ImageView.ScaleType.FIT_CENTER));
-        weatherIcon.setScaleX((float)0.5);
-        weatherIcon.setScaleY((float)0.5);
-        weatherIcon.setAdjustViewBounds(true);
+            LinearLayout day = new LinearLayout(getActivity());
+            day.setLayoutParams(new LinearLayout.MarginLayoutParams(FrameLayout.MarginLayoutParams.WRAP_CONTENT, FrameLayout.MarginLayoutParams.WRAP_CONTENT));
+            day.setOrientation(LinearLayout.VERTICAL);
+            day.setBackgroundColor(0xFF2D5D76);
 
-        TextView day = new TextView(getActivity());
-        day.setText("Thursday");
-        day.setPadding(0, 10, 0, 10);
-        day.setTextSize(35);
-        day.setTypeface(null, Typeface.BOLD);
+            TextView mon = new TextView(getActivity());
+            mon.setText("Mon");
+            mon.setPadding(40,20,0,0);
+            mon.setTextSize(24);
 
-        parent.addView(day);
-        parent.addView(weatherIcon);
+            TextView tue = new TextView(getActivity());
+            tue.setText("Tue");
+            tue.setPadding(40,100,0,0);
+            tue.setTextSize(24);
 
-        return parent;
+            TextView wed = new TextView(getActivity());
+            wed.setText("Wed");
+            wed.setPadding(40,100,0,0);
+            wed.setTextSize(24);
+
+            TextView thu = new TextView(getActivity());
+            thu.setText("Thu");
+            thu.setPadding(40,100,0,0);
+            thu.setTextSize(24);
+
+            TextView fri = new TextView(getActivity());
+            fri.setText("Fri");
+            fri.setPadding(40,100,0,0);
+            fri.setTextSize(24);
+
+            TextView sat = new TextView(getActivity());
+            sat.setText("Sat");
+            sat.setPadding(40,100,0,0);
+            sat.setTextSize(24);
+
+            TextView sun = new TextView(getActivity());
+            sun.setText("Sun");
+            sun.setPadding(40,100,0,20);
+            sun.setTextSize(24);
+
+            day.addView(mon);
+            day.addView(tue);
+            day.addView(wed);
+            day.addView(thu);
+            day.addView(fri);
+            day.addView(sat);
+            day.addView(sun);
+
+
+            LinearLayout weathericon = new LinearLayout(getActivity());
+            weathericon.setLayoutParams(new LinearLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT));
+            weathericon.setOrientation(LinearLayout.VERTICAL);
+            weathericon.setBackgroundColor(0xFF2D5D76);
+
+            TextView snow = new TextView(getActivity());
+            snow.setCompoundDrawablesWithIntrinsicBounds(R.drawable.snow, 0, 0, 0);
+            snow.setText("Snow day");
+            snow.setPadding(20,20,0,0);
+            snow.setCompoundDrawablePadding(50);
+            snow.setTextSize(24);
+
+            TextView sunny = new TextView(getActivity());
+            sunny.setCompoundDrawablesWithIntrinsicBounds(R.drawable.sunny, 0, 0, 0);
+            sunny.setText("It hot outside");
+            sunny.setPadding(20,100,0,0);
+            sunny.setCompoundDrawablePadding(50);
+            sunny.setTextSize(24);
+
+
+            TextView windy = new TextView(getActivity());
+            windy.setCompoundDrawablesWithIntrinsicBounds(R.drawable.windy,0,0,0);
+            windy.setText("Strong wind caution");
+            windy.setPadding(20,100,0,0);
+            windy.setCompoundDrawablePadding(50);
+            windy.setTextSize(24);
+
+            TextView rain__heavy = new TextView(getActivity());
+            rain__heavy.setCompoundDrawablesWithIntrinsicBounds(R.drawable.heavy_rain,0,0,0);
+            rain__heavy.setText("Don't forget your raincoat");
+            rain__heavy.setPadding(20,100,0,0);
+            rain__heavy.setCompoundDrawablePadding(50);
+            rain__heavy.setTextSize(24);
+
+            TextView rain = new TextView(getActivity());
+            rain.setCompoundDrawablesWithIntrinsicBounds(R.drawable.moderate_rain,0,0,0);
+            rain.setText("Bring your umbrella");
+            rain.setPadding(20,100,0,0);
+            rain.setCompoundDrawablePadding(50);
+            rain.setTextSize(24);
+
+            TextView overcast = new TextView(getActivity());
+            overcast.setCompoundDrawablesWithIntrinsicBounds(R.drawable.overcast,0,0,0);
+            overcast.setText("The weather seem sad");
+            overcast.setPadding(20,100,0,0);
+            overcast.setCompoundDrawablePadding(50);
+            overcast.setTextSize(24);
+
+            TextView thunder = new TextView(getActivity());
+            thunder.setCompoundDrawablesWithIntrinsicBounds(R.drawable.thunder, 0, 0, 0);
+            thunder.setText("Stay inside");
+            thunder.setPadding(20,100,0,20);
+            thunder.setCompoundDrawablePadding(50);
+            thunder.setTextSize(24);
+
+
+            weathericon.addView(snow);
+            weathericon.addView(sunny);
+            weathericon.addView(windy);
+            weathericon.addView(rain);
+            weathericon.addView(overcast);
+            weathericon.addView(rain__heavy);
+            weathericon.addView(thunder);
+
+
+        forecast.addView(day);
+        forecast.addView(weathericon);
+
+        return forecast;
     }
 }
